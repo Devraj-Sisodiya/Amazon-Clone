@@ -5,9 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in</title>
     <link rel="icon" href="./images/favicon_logo.png" >
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 <body>
-    <p>Hello Everyone</p>
+    <div class="navBar">
+        <a href="#">
+            <img src="./images/amazon_logo.png" alt="logo" id="amzLogo" class="border">
+        </a>
+        <div id="navAddress" class="border">
+            <p id="adrs1">Deliver to</p>
+            <div class="adrs2">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>India</span>
+            </div>
+        </div>
+
+        <div id="nav-search">
+            <select name="srchCategory" id="itemCategory">
+                <option value="1">All</option>
+                <option value="2">Alexa Skills</option>
+                <option value="3">Amazon Devices</option>
+                <option value="4">Amazon Fashion</option>
+                <option value="5">Amazon Fresh</option>
+                <option value="6">Amazon Pharmacy</option>
+                <option value="7">Appliances</option>
+                <option value="8">Apps & Games</option>
+                <option value="9">Audible Audiobooks</option>
+                <option value="10">Baby</option>
+                <option value="11">Beauty</option>
+                <option value="12">Books</option>
+                <option value="13">Cars & moterbike</option>
+                <option value="14">Collectibles</option>
+            </select>
+
+            <input type="text" placeholder="Search Amazon.in" id="searchItem">
+            <div id="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+        </div>
+
+        <div class="language border">
+            <div class="flag">
+                <span>&#127470;&#127475;</span>
+            </div>
+            <select name="langs" id="selectLang">
+                <option value="">English</option>
+                <option value="">Hindi</option>
+                <option value="">Marathi</option>
+                <option value="">Urdu</option>
+            </select>
+        </div>
+
+        <div class="box5 border">
+            <p class="text1">Hello, sign in</p>
+            <p class="text2">Accounts & Lists</p>
+        </div>
+
+        <div class="box5 border">
+            <p class="text1">Returns</p>
+            <p class="text2">& Orders</p>
+        </div>
+
+        <div class="box6 border">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Cart</span>
+        </div>
+    </div>
+
 </body>
 </html>
