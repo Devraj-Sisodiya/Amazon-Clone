@@ -3,7 +3,9 @@
     padding: 0;
     color: white;
     box-sizing: border-box;
+    align-items: center;
     font-family: Arial, sans-serif;
+    font-size: 14px;
 }
 
 .navBar{
@@ -41,7 +43,12 @@
 .border:hover {
     border: 1px solid white;
 }
-
+#navAddress{
+    
+    height : 60px;
+    align-items: center;
+    /* width : 50px; */
+}
 #adrs1 {
     font-size: 12px;
     color: #cccccc;
@@ -125,4 +132,77 @@
     font-size: 0.95rem;
     font-weight: 700;
     margin-bottom: 3px;
+}
+
+/* 2nd navigation menu */
+
+.nav-menu {
+    height: 39px;
+    background-color: #232F3E;
+    color: #0F1111;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly;*/
+}
+
+.ThreeBars {
+    border: 1px solid transparent;
+    width: 58px;
+    position: static;
+    display: flex;
+    gap: 5px;
+    padding: 8px 9px 8px 9px;
+}
+
+.ThreeBars i {
+    font-size: 25px;
+}
+#all {
+    align-items: center;
+}
+.fresh {
+    display: flex;
+    width: 55px;
+    height: 39px;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    padding: 5px 5px;
+}
+
+.Mx-Player {
+    display: flex;
+    align-items: center;
+    width: 85px;
+    height: 39px;
+}
+
+.sell {
+    width:50px;
+}
+
+.nav2 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 39px;
+    padding: 5px 5px;
+    /* width : 50px; */
+}
+
+.dealsRevel {
+    font-family: sans-serif;
+    position: absolute;
+    right : 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.primeday {
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height : 40px;
+    
+    background-size: cover;
 }
