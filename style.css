@@ -10,6 +10,8 @@
 .navBar{
     height: 60px;
     background-color: #0f1111;
+    position: relative;
+    /* top: 0; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -243,16 +245,225 @@
     justify-content: center;
     width: 60px;
     height : 40px;
-    
     background-size: cover;
 }
 
 #prime {
     height : 44px;
     width: 75px;
-    /* display: flex;
-    align-items: center;
-    gap: 18px;
-    padding: 5px; */
     filter: invert(1);
+}
+
+
+/* Hero section  */
+.heroSection {
+    height: 350px;
+    background-image: url("./images/heroImg.jpg");
+    background-size: cover;
+    background-position : top center;
+    background-repeat: no-repeat;
+}
+
+/* --- SHOP SECTION WRAPPER --- */
+.shopSection {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: -150px; 
+    z-index: 10;
+    position: relative;
+}
+
+/* --- THE CARD --- */
+.box {
+    width: 320px; 
+    background-color: white;
+    padding: 20px 0 15px 0;
+    margin-bottom: 20px; 
+}
+
+.box-content {
+    margin: 0 20px; 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.box-content h2 {
+    font-size: 21px; 
+    color: #0f1111;
+    margin-bottom: 15px;
+}
+
+/* --- THE 2x2 IMAGE GRID --- */
+.box-img-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    margin-bottom: 20px;
+    flex-grow: 1; 
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.grid-item img {
+    width: 100%;
+    height: 130px; 
+    object-fit: contain; 
+    cursor: pointer;
+}
+
+.grid-item p {
+    font-size: 12px;
+    color: #0f1111;
+    margin-top: 5px;
+}
+
+/* --- THE LINK --- */
+.box-content a {
+    color: #007185;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.box-content a:hover {
+    color: #c45500; 
+    text-decoration: underline;
+}
+
+.signIn {
+    height : 150px;
+    width: 300px;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* --- COLUMN WRAPPER --- */
+.box-column {
+    display: flex;
+    flex-direction: column;
+    width: 320px; 
+    gap: 20px;
+}
+
+.box-column .box {
+    width: 100%;
+    margin-bottom: 0; 
+}
+
+
+/* --- SIGN IN BOX STYLES --- */
+.sign-in-box {
+    padding-bottom: 25px; 
+}
+
+.sign-in-box h2 {
+    font-size: 21px;
+    margin-bottom: 25px; 
+}
+
+.sign-in-btn {
+    background-color: #FFD814; 
+    color: #0f1111;
+    border: none;
+    border-radius: 100px; 
+    padding: 10px 0;
+    width: 100%; 
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sign-in-btn:hover {
+    background-color: #F7CA00; /* Darkens slightly on hover */
+}
+
+
+/* --- PRODUCT AD BOX STYLES --- */
+.ad-box {
+    background-color: #f7f7f7; /* The subtle grey background from the screenshot */
+    padding: 15px; /* Tighter padding than standard boxes */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ad-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px; 
+    margin-bottom: 15px;
+}
+
+.ad-image-wrapper img {
+    max-height: 100%;
+    object-fit: contain; /* Keeps the earbuds from stretching */
+}
+
+/* The white box at the bottom of the ad */
+.ad-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex; /* Places the logo and text side-by-side */
+    gap: 10px;
+    align-items: center;
+}
+
+.ad-logo {
+    width: 55px; /* Adjust based on your actual logo image size */
+    object-fit: contain;
+}
+
+.ad-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ad-info a {
+    color: #007185;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap; /* Forces text to stay on one line */
+    overflow: hidden; /* Hides text that spills over */
+    text-overflow: ellipsis; /* Automatically adds the "..." if text is too long */
+    width: 190px; 
+}
+
+.ad-info a:hover {
+    color: #c45500;
+    text-decoration: underline;
+}
+
+.ad-rating {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #FFA41C; /* Amazon star orange */
+}
+
+.ad-rating span {
+    color: #007185;
+    margin-left: 5px;
+}
+
+.deal-timer {
+    background-color: #CC0C39; /* Amazon red */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 3px;
+    align-self: flex-start; /* Stops the red box from stretching across the whole card */
 }
