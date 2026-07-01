@@ -709,3 +709,84 @@ body {
     color: #DDDDDD;
     font-size: 11px;
 }
+
+
+/* MOBILE RESPONSIVE RULES */
+
+@media (max-width: 768px) {
+    
+    /* --- 1. TOP NAVBAR TRIAGE --- */
+    /* A phone cannot fit the address, language, returns, and sign-in text. We must hide them. */
+    #navAddress, .language, .box5, .dealsRevel {
+        display: none; 
+    }
+    
+    .navBar {
+        padding: 0 5px;
+    }
+
+    #nav-search {
+        flex-grow: 1; 
+        margin: 0 10px;
+    }
+
+    /* --- 2. SECONDARY NAV SCROLL (The Swipe Fix) --- */
+    
+    .nav-menu {
+        overflow-x: auto; 
+        white-space: nowrap; 
+        padding-right: 15px;
+    }
+    
+    /* Hides the ugly scrollbar but keeps the swipe functionality */
+    .nav-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* --- 3. THE HERO & CARD OVERLAP FIX --- */
+    .heroSection {
+        height: 200px;
+    }
+
+    .heroSection::after {
+        height: 75px; 
+    }
+
+    .shopSection {
+        margin-top: -80px; 
+        padding: 10px;
+    }
+
+    /* --- 4. THE SHOP CARDS FIX --- */
+    .box, .box-column {
+        width: 100%; 
+        max-width: 400px; 
+        margin-bottom: 15px;
+    }
+
+    /* --- 5. THE FOOTER FIX --- */
+    /* 4 columns side-by-side will crash on a phone. We stack them into a single center-aligned column. */
+    .footer-links-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px; 
+        padding: 30px 0;
+    }
+
+    .footer-col {
+        align-items: center; 
+        text-align: center;
+    }
+
+    /* The dark sub-footer 4-column grid shrinks to a 2-column grid */
+    .subsidiary-grid {
+        grid-template-columns: 1fr 1fr; 
+        gap: 30px 20px;
+        padding: 0 15px;
+    }
+    
+    .footer-bottom-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
