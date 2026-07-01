@@ -5,19 +5,27 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+body {
+    background-color: #EAEDED;
+    padding-top: 60px;
+}
 
 /* 2. NAVBAR PARENT */
 .navBar{
     height: 60px;
     background-color: #0f1111;
-    position: relative;
-    /* top: 0; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     color : white;
     padding:  0 10px;
     gap : 10px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 /* making sure that inner elements are of white color */
@@ -260,8 +268,20 @@
     height: 350px;
     background-image: url("./images/heroImg.jpg");
     background-size: cover;
+    background-color: #007185;
+    position: relative;
     background-position : top center;
     background-repeat: no-repeat;
+}
+
+.heroSection ::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, rgba(234, 237, 237, 0), #EAEDED);
 }
 
 /* --- SHOP SECTION WRAPPER --- */
@@ -301,6 +321,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: 1fr 1fr; 
+    gap: 20px 15px;
     margin-bottom: 20px;
     flex-grow: 1; 
 }
@@ -384,14 +405,14 @@
 }
 
 .sign-in-btn:hover {
-    background-color: #F7CA00; /* Darkens slightly on hover */
+    background-color: #F7CA00; 
 }
 
 
 /* --- PRODUCT AD BOX STYLES --- */
 .ad-box {
-    background-color: #f7f7f7; /* The subtle grey background from the screenshot */
-    padding: 15px; /* Tighter padding than standard boxes */
+    background-color: #f7f7f7; 
+    padding: 15px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -407,7 +428,7 @@
 
 .ad-image-wrapper img {
     max-height: 100%;
-    object-fit: contain; /* Keeps the earbuds from stretching */
+    object-fit: contain; 
 }
 
 /* The white box at the bottom of the ad */
@@ -415,13 +436,13 @@
     background-color: white;
     border-radius: 8px;
     padding: 10px;
-    display: flex; /* Places the logo and text side-by-side */
+    display: flex; 
     gap: 10px;
     align-items: center;
 }
 
 .ad-logo {
-    width: 55px; /* Adjust based on your actual logo image size */
+    width: 55px; 
     object-fit: contain;
 }
 
@@ -435,9 +456,9 @@
     color: #007185;
     text-decoration: none;
     font-size: 14px;
-    white-space: nowrap; /* Forces text to stay on one line */
-    overflow: hidden; /* Hides text that spills over */
-    text-overflow: ellipsis; /* Automatically adds the "..." if text is too long */
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
     width: 190px; 
 }
 
@@ -450,7 +471,7 @@
     display: flex;
     align-items: center;
     font-size: 13px;
-    color: #FFA41C; /* Amazon star orange */
+    color: #FFA41C; 
 }
 
 .ad-rating span {
@@ -459,11 +480,232 @@
 }
 
 .deal-timer {
-    background-color: #CC0C39; /* Amazon red */
+    background-color: #CC0C39;
     color: white;
     font-size: 12px;
     font-weight: bold;
     padding: 3px 6px;
     border-radius: 3px;
-    align-self: flex-start; /* Stops the red box from stretching across the whole card */
+    align-self: flex-start; 
+}
+
+/* --- FOOTER SIGN-IN BANNER --- */
+.footer-signin-banner {
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid grey;   
+    border-bottom: 1px solid grey; 
+    padding: 35px 0;
+    display: flex;
+    justify-content: center; 
+    margin-top: 40px;
+}
+
+.footer-signin-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 6px; 
+}
+
+.footer-signin-content h2 {
+    font-size: 24px; 
+    font-weight: bold;
+    color: #0F1111;
+}
+
+.banner-btn {
+    width: 230px; 
+    padding: 6px 0;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.footer-signin-content p {
+    font-size: 11px;
+    color: #0F1111;
+}
+
+.footer-signin-content a {
+    color: #007185;
+}
+
+.footer-signin-content a:hover {
+    color: #C45500; 
+    text-decoration: underline;
+}
+
+/* --- BACK TO TOP BAR --- */
+.back-to-top {
+    width: 100%;
+    background-color: #37475A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.back-to-top:hover {
+    background-color: #475a6d; 
+}
+
+.back-to-top a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* --- MAIN FOOTER CONTAINER --- */
+.navFooter {
+    background-color: #232F3E;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* --- THE 4 COLUMNS --- */
+.footer-links-row {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1000px; 
+    padding: 50px 0; 
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    width: 200px; 
+}
+
+.footer-col h2 {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 5px; 
+}
+
+.footer-col a {
+    color: #DDDDDD; 
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+}
+
+/* --- THE DIVIDER LINE --- */
+.footer-line {
+    width: 100%;
+    border-top: 1px solid #3a4553;
+}
+
+/* --- LOGO & BUTTONS ROW --- */
+.footer-bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px; 
+    padding: 30px 0;
+}
+
+.footer-logo {
+    height: 30px;
+    margin-top: 10px; 
+    cursor: pointer;
+    
+}
+
+.footer-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.footer-btn {
+    background-color: transparent;
+    color: #CCCCCC;
+    border: 1px solid #848688;
+    padding: 6px 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- DARK SUB-FOOTER WRAPPER --- */
+.footer-bottom-dark {
+    background-color: #131A22; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0; 
+}
+
+/* --- CSS GRID FOR SUBSIDIARY LINKS --- */
+.subsidiary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px 60px;
+    max-width: 1000px;
+    margin-bottom: 40px; 
+}
+
+/* --- INDIVIDUAL LINK BLOCKS --- */
+.sub-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    line-height: 1.2; 
+}
+
+.sub-link:hover .sub-title, 
+.sub-link:hover .sub-desc {
+    text-decoration: underline;
+}
+
+.sub-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: #DDDDDD; 
+    margin-bottom: 2px;
+}
+
+.sub-desc {
+    font-size: 11px;
+    color: #999999; 
+}
+
+/* --- LEGAL LINKS & COPYRIGHT --- */
+.footer-legal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.legal-links {
+    display: flex;
+    gap: 15px; 
+}
+
+.legal-links a {
+    color: #DDDDDD;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.legal-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    color: #DDDDDD;
+    font-size: 11px;
 }
